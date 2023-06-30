@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                 this,
                 0, intent, 0
             )
-            val launch=packageManager.getLaunchIntentForPackage("com.google.android.gm")
+           // val launch=packageManager.getLaunchIntentForPackage("com.google.android.gm")
 
 
            // Intent launchIntent= getPackageManager().getLaunchIntentForPackage
@@ -47,9 +47,7 @@ class MainActivity : AppCompatActivity() {
                     time+ 1000*60*60*24
                 }
             }
-            if(launch!=null){
-                startActivity(launch)
-            }
+
             alarmManager!!.setRepeating(AlarmManager.RTC_WAKEUP, time, 1000 , pendingIntent)
 
 
